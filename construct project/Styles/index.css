@@ -18,6 +18,15 @@
 
 }
 
+#reg{
+  transition: 1s;
+  cursor: pointer;
+}
+
+#reg:hover{
+  transform: scale(1.05);
+}
+
 #wa{
   display: flex;
   justify-content: space-evenly;
