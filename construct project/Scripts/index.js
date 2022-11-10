@@ -99,6 +99,13 @@ function dp(out){
 
     let button = document.createElement("button")
     button.innerText = "ADD"
+    button.addEventListener("click", function () {
+      let arr = JSON.parse(localStorage.getItem("cart")) || [];
+
+      arr.push(element);
+
+      let a = localStorage.setItem("cart", JSON.stringify(arr));
+    });
 
     div.append(img , name , piece , mrp , button)
 
@@ -135,3 +142,15 @@ p = setInterval(() => {
   }
   df(logo);
 }, 3000);
+
+
+let button = document.getElementById("reg")
+
+button.addEventListener("click" , function(){
+  location.href = "mobile.html"
+})
+
+let car = document.getElementById("cart")
+car.addEventListener("click" , function(){
+  location.href = "cart.html"
+})
