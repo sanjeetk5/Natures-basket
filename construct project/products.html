@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #words {
+        width: 100%;
+        height: auto;
+        /* border: 1px solid black; */
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        gap: 5px;
+        margin: auto;
+        box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+      }
+
+      #words > div:nth-child(1) {
+        grid-row-start: 1;
+        grid-row-end: 4;
+      }
+
+      #reg {
+        transition: 1s;
+        cursor: pointer;
+      }
+
+      #reg:hover {
+        transform: scale(1.05);
+      }
+
+      #wa {
+        display: flex;
+        justify-content: space-evenly;
+        font-size: smaller;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      #words > div:nth-child(2) {
+        grid-column-start: 2;
+        grid-column-end: 8;
+        /* border: 1px solid red; */
+        grid-row-start: 1;
+        grid-row-end: 2;
+      }
+
+      #wd {
+        display: flex;
+        justify-content: right;
+      }
+
+      #words > div:nth-child(3) {
+        grid-column-start: 12;
+        grid-column-end: 14;
+        /* border: 1px solid red; */
+        grid-row-start: 1;
+        grid-row-end: 2;
+      }
+
+      #words > div:nth-child(4) {
+        grid-column-start: 2;
+        grid-column-end: 12;
+        /* border: 1px solid red; */
+        grid-row-start: 2;
+        grid-row-end: 4;
+      }
+
+      #wb {
+        display: flex;
+        justify-content: left;
+      }
+
+      #words > div:nth-child(5) {
+        grid-column-start: 12;
+        grid-column-end: 14;
+        /* border: 1px solid red; */
+        grid-row-start: 2;
+        grid-row-end: 4;
+      }
+
+      #wc {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      #second {
+        display: flex;
+        justify-content: space-evenly;
+        text-align: center;
+        margin: auto;
+        /* margin-top: 2%; */
+        box-shadow: rgba(240, 5, 5, 0.15) 1.95px 1.95px 2.6px;
+        padding-top: 1%;
+        padding-bottom: 1%;
+      }
+
+      #second > div > button {
+        /* border: 1px solid black; */
+        transition: 1s;
+      }
+
+      #second > div > button:hover {
+        transform: scale(1.1);
+      }
+
+      #second > div > select {
+        border: none;
+        color: red;
+      }
+
+      #second > div > button {
+        border: none;
+        cursor: pointer;
+        height: 20px;
+        text-align: center;
+      }
+
+      /* #third > img {
+  cursor: pointer;
+  width: 100%;
+  height: 400px;
+  border-radius: 10px;
+} */
+
+#product-container{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  grid-template-rows: auto;
+  margin: auto;
+  text-align: center;
+  gap: 20px;
+}
+
+#product-container>div{
+  /* width: 23%; */
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  transition: 1s;
+  padding-bottom: 2%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+#product-container>div:hover{
+  transform: scale(1.05);
+}
+
+#product-container>div>img{
+  width: 100%;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  cursor: pointer;
+  
+}
+
+#product-container>div>button{
+  background-color: #92be4d;
+  height: 40px;
+  width: 120px;
+  border-radius: 15px;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+    </style>
+  </head>
+  <body>
+    <div id="words">
+      <div>
+        <img
+          style="width: 95%; border-radius: 100px; border: 2px solid red"
+          src="foodify.jpg"
+          alt="Error Loading Image"
+        />
+      </div>
+
+      <div id="wa">
+        <div>
+          <p>Online Slots Availability</p>
+        </div>
+        <div>
+          <p>Fresh & Fast</p>
+        </div>
+        <div>
+          <p>Store Locator</p>
+        </div>
+        <div>
+          <p>Contact Us</p>
+        </div>
+      </div>
+
+      <div id="wd">
+        <div>
+          <button
+            id="reg"
+            style="
+              height: 50px;
+              width: 105px;
+              color: black;
+              border: none;
+              box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+            "
+          >
+            Login/Register
+          </button>
+        </div>
+      </div>
+
+      <div id="wb">
+        <div>
+          <input
+            type="number"
+            placeholder="🖋️Enter Pin"
+            style="
+              width: 90px;
+              height: 38px;
+              border: none;
+              box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+            "
+          />
+        </div>
+
+        <div>
+          <select
+            name=""
+            id=""
+            style="
+              width: 90px;
+              height: 40px;
+              text-align: center;
+              border: none;
+              box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+            "
+          >
+            <option value="">Mumbai</option>
+            <option value="">Pune</option>
+            <option value="">Delhi NCR</option>
+            <option value="">Thane</option>
+          </select>
+        </div>
+
+        <div>
+          <input
+            type="search"
+            name=""
+            placeholder="Start shopping..."
+            style="
+              width: 499%;
+              height: 40px;
+              text-align: center;
+              border: none;
+              box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+            "
+          />
+        </div>
+      </div>
+
+      <div id="wc">
+        <div>
+          <button
+            style="
+              height: 40px;
+              width: 45px;
+              border: none;
+              box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+            "
+          >
+            ⭐
+          </button>
+        </div>
+
+        <div>
+          <button
+            style="
+              height: 40px;
+              width: 45px;
+              border: none;
+              box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+            "
+            id="cart"
+          >
+            🛒
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div id="second">
+      <div>
+        <select name="" id="all">
+          <option value="products">All Products</option>
+
+          <option value="Fruits and vegetables" id="ap">
+            Fruits and vegetables
+          </option>
+        </select>
+      </div>
+
+      <div>
+        <button>MY ORDERS</button>
+      </div>
+
+      <div>
+        <button>GIFTING</button>
+      </div>
+
+      <div>
+        <button>REWARDS</button>
+      </div>
+
+      <div>
+        <button>BLOG</button>
+      </div>
+
+      <div>
+        <button>OFFERS</button>
+      </div>
+
+      <div>
+        <button>CONNOISSEUR'S SELECTION</button>
+      </div>
+
+      <div>
+        <button>BOOK STORE VISIT</button>
+      </div>
+    </div>
+
+    <!-- <div id="third">
+        <img
+          src="https://gnbdevcdn.s3-ap-southeast-1.amazonaws.com/Marketing/d8cc09f5-5d68-4853-ae9a-233ceabe3acd.jpg?v=14"
+          alt=""
+        />
+      </div> -->
+
+    <div id="product-container"></div>
+  </body>
+</html>
+
+<script>
+  let bag = [];
+
+  let url = "https://6369fed4c07d8f936d901d30.mockapi.io/products";
+
+  async function getdata() {
+    try {
+      let res = await fetch(url);
+      let api = await res.json();
+      bag = api;
+      console.log(api);
+      displaytable(api);
+    } catch (err) {
+      alert(err);
+    }
+  }
+
+  getdata();
+
+  function displaytable(api) {
+    document.getElementById("product-container").innerHTML = "";
+    api.forEach((element) => {
+      let div = document.createElement("div");
+
+      let img = document.createElement("img");
+      img.src = element.avatar;
+
+      let name = document.createElement("p");
+      name.innerText = element.name;
+
+      let piece = document.createElement("p");
+      piece.innerText = "1" + " " + "pc";
+
+      let mrp = document.createElement("p");
+      mrp.innerText = "Rs" + " " + "-" + " " + element.price;
+
+      let button = document.createElement("button");
+      button.innerText = "ADD";
+      button.addEventListener("click", function () {
+        let arr = JSON.parse(localStorage.getItem("pro")) || [];
+
+        arr.push(element);
+
+        let a = localStorage.setItem("pro", JSON.stringify(arr));
+      });
+
+      div.append(img, name, piece, mrp, button);
+
+      document.querySelector("#product-container").append(div);
+    });
+  }
+</script>

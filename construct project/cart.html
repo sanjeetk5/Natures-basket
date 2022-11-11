@@ -401,11 +401,13 @@
     <div id="second">
       <div>
         <select name="" id="">
-          <option value="">SHOP BY CATEGORY</option>
-          <option value="gifting">Gifting</option>
+          <option value="">All Products</option>
+          
           <option value="">Fruits and vegetables</option>
-          <option value="">Cheese and milk</option>
-          <option value="">Health</option>
+         
+          
+
+          
         </select>
       </div>
 
@@ -477,6 +479,8 @@
             font-size: x-small;
             font-family: Arial, Helvetica, sans-serif;
           "
+
+          id="shop"
         >
           PROCEED TO CHECKOUT
         </button>
@@ -559,6 +563,8 @@
           font-size: x-small;
           font-family: Arial, Helvetica, sans-serif;
         "
+
+        id="shopa"
       >
         PROCEED TO CHECKOUT
       </button>
@@ -901,6 +907,7 @@
   });
 
   let arr = JSON.parse(localStorage.getItem("cart"));
+  
 
   let i = 0;
   let sum = 0;
@@ -975,4 +982,14 @@
 
   document.querySelector("#carttotal").textContent = "Rs" + " " + (sum - sum2);
   document.querySelector("#carttotala").textContent = "Rs" + " " + (sum - sum2);
+
+  let so = document.getElementById("shop")
+  so.addEventListener("click" , function(){
+    location.href = "address.html"
+  })
+
+  let sa = document.getElementById("shopa")
+  sa.addEventListener("click" , function(){
+    location.href = "address.html"
+  })
 </script>

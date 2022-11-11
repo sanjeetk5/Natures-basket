@@ -5,30 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-
     <style>
-      #first > form {
-        display: flex;
-        justify-content: center;
-        /* border: 2px solid black; */
-        gap: 10px;
-      }
-
-      #sub {
-        color: white;
-        background-color: rgb(38, 179, 38);
-        width: 90px;
-        height: 35px;
-        border: none;
-        border-radius: 5px;
-        transition: 1s;
-        cursor: pointer;
-      }
-
-      #sub:hover {
-        transform: scale(1.05);
-      }
-
       #words {
         width: 100%;
         height: auto;
@@ -140,12 +117,68 @@
         text-align: center;
       }
 
-      #third > img {
-        cursor: pointer;
-        width: 100%;
-        height: 400px;
-        border-radius: 10px;
+      /* #addr{
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+        margin: auto;
+      } */
+
+      #addr > form {
+        display: grid;
+        gap: 10px;
+        margin-top: 2%;
       }
+
+      #addr > form > div {
+        width: 25%;
+        display: flex;
+        justify-content: space-between;
+      }
+
+      #addr > form > div > label {
+        font-family: Arial, Helvetica, sans-serif;
+        color: grey;
+      }
+
+      #head {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      #butt {
+        padding-top: 5%;
+      }
+
+      #ha {
+        box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+        padding-left: 2%;
+        padding-right: 2%;
+        padding-top: 2%;
+        padding-bottom: 2%;
+      }
+
+      #gift {
+        margin-top: 2%;
+        margin-left: 2%;
+      }
+
+      #gifta {
+        margin-top: 2%;
+        margin-left: 2%;
+      }
+
+      #gifta > input {
+        width: 100%;
+        height: 70px;
+      }
+
+      #butta {
+        display: flex;
+        justify-content: right;
+        padding-top: 2%;
+      }
+
       #tenth {
         text-align: center;
       }
@@ -240,30 +273,10 @@
     </style>
   </head>
   <body>
-    <div id="first">
-      <form action="" id="form">
-        <input type="number" placeholder="Enter your Phone Number" id="phone" />
-        <input type="number" placeholder="Enter otp" id="otp" />
-        <input type="email" placeholder="Enter your email id" id="mail" />
-        <input
-          type="text"
-          placeholder="Enter a strong password"
-          id="password"
-        />
-        <input type="submit" placeholder="Submit" id="sub" />
-      </form>
-    </div>
-
     <div id="words">
-      <div>
+      <div id="log">
         <img
-          id="log"
-          style="
-            width: 95%;
-            border-radius: 100px;
-            border: 2px solid red;
-            cursor: pointer;
-          "
+          style="width: 95%; border-radius: 100px; border: 2px solid red"
           src="foodify.jpg"
           alt="Error Loading Image"
         />
@@ -419,11 +432,124 @@
       </div>
     </div>
 
-    <div id="third">
-      <img
-        src="https://gnbdevcdn.s3-ap-southeast-1.amazonaws.com/Marketing/d8cc09f5-5d68-4853-ae9a-233ceabe3acd.jpg?v=14"
-        alt=""
-      />
+    <div id="ha">
+      <div id="head">
+        <div>
+          <p style="font-family: Arial, Helvetica, sans-serif">
+            Enter Shipping Address
+          </p>
+          <p
+            style="
+              font-family: Arial, Helvetica, sans-serif;
+              font-size: x-small;
+            "
+          >
+            (Fields marked with * are mandatory)
+          </p>
+        </div>
+
+        <div id="butt">
+          <button id="buttat"
+            style="
+              color: white;
+              background-color: #99c655;
+              width: 230px;
+              height: 30px;
+              border: none;
+            "
+          >
+            REVIEW AND PLACE ORDER
+          </button>
+        </div>
+      </div>
+
+      <div id="addr">
+        <form id="form">
+          <div>
+            <label for="">First Name*</label>
+            <input type="text" />
+          </div>
+
+          <div>
+            <label for="">Last Name*</label>
+            <input type="text" />
+          </div>
+
+          <div>
+            <label for="">Address*</label>
+            <input type="text" />
+          </div>
+
+          <div>
+            <label for="">Landmark*</label>
+            <input type="text" />
+          </div>
+
+          <div>
+            <label for="">Pincode*</label>
+            <input type="number" />
+          </div>
+
+          <div>
+            <label for="">Area*</label>
+            <input type="text" />
+          </div>
+
+          <div>
+            <label for="">Country*</label>
+            <input type="text" />
+          </div>
+
+          <div>
+            <label for="">State*</label>
+            <input type="text" />
+          </div>
+
+          <div>
+            <label for="">City*</label>
+            <input type="text" />
+          </div>
+
+          <div>
+            <label for="">Mobile No.*</label>
+            <input type="number" />
+          </div>
+
+          <div>
+            <label for="">Billing Address</label>
+
+            <input type="checkbox" /> Same as shipping Address
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div id="gift">
+      <input type="checkbox" />
+      <br />
+      <label for="">I would like to gift this order</label>
+    </div>
+
+    <div id="gifta">
+      <label for="" style="font-family: Arial, Helvetica, sans-serif"
+        >Gift Message (OPTIONAL)</label
+      >
+      <br />
+      <input type="text" placeholder="Enter your gift message" />
+    </div>
+
+    <div id="butta">
+      <button id="buttao"
+        style="
+          color: white;
+          background-color: #99c655;
+          width: 230px;
+          height: 30px;
+          border: none;
+        "
+      >
+        REVIEW AND PLACE ORDER
+      </button>
     </div>
 
     <div id="tenth"></div>
@@ -758,42 +884,20 @@
 </html>
 
 <script>
-  let form = document.querySelector("#form");
+  let a = document.getElementById("buttao")
+  a.addEventListener("click" , function(){
+    location.href = "payment.html"
+  })
 
-  let lsdata = JSON.parse(localStorage.getItem("signup")) || [];
-  //   let a = document.getElementById("sub");
-  form.addEventListener("submit", function (e) {
-    e.preventDefault();
-    let obj = {
-      number: form.phone.value,
-      otp: form.otp.value,
-      email: form.mail.value,
-      pwd: form.password.value,
-    };
 
-    // if (obj.number.length == 10 && obj.otp.length == 4) {
-    //   location.href = "signin.html";
-    // } else {
-    //   alert("Wrong Input");
-    // }
+  let b = document.getElementById("buttat")
+  b.addEventListener("click" , function(){
+    location.href = "payment.html"
+  })
 
-    if (
-      obj.email == "" ||
-      obj.pwd == "" ||
-      obj.number.length != 10 ||
-      obj.otp.length != 4
-    ) {
-      alert("Please fill in the details Correctly");
-    } else {
-      alert("siginup succesfull");
-      lsdata.push(obj);
-      localStorage.setItem("signup", JSON.stringify(lsdata));
-      location.href = "signin.html";
-    }
-  });
 
-  let b = document.getElementById("log");
-  b.addEventListener("click", function () {
+  let c = document.getElementById("log");
+  c.addEventListener("click", function () {
     location.href = "index.html";
   });
 </script>
