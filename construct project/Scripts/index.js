@@ -92,10 +92,10 @@ function dp(out){
     name.innerText = element.name
 
     let piece = document.createElement("p")
-    piece.innerText = "1"
+    piece.innerText = "1" + " " + "pc"
 
     let mrp = document.createElement("p")
-    mrp.innerText ="Mrp"+ " " + "Rs" + "-" + element.price
+    mrp.innerText ="Rs"  + " " + "-"  + " " + element.price
 
     let button = document.createElement("button")
     button.innerText = "ADD"
@@ -154,3 +154,14 @@ let car = document.getElementById("cart")
 car.addEventListener("click" , function(){
   location.href = "cart.html"
 })
+
+
+let all = document.getElementById("all")
+
+all.addEventListener("change" , function(el){
+  console.log(el.target.value)
+  
+  location.href = el.target.value +  ".html"
+})
+
+
