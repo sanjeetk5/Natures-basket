@@ -375,11 +375,11 @@
       let button = document.createElement("button");
       button.innerText = "ADD";
       button.addEventListener("click", function () {
-        let arr = JSON.parse(localStorage.getItem("pro")) || [];
+        let arr = JSON.parse(localStorage.getItem("cart")) || [];
 
         arr.push(element);
 
-        let a = localStorage.setItem("pro", JSON.stringify(arr));
+        let a = localStorage.setItem("cart", JSON.stringify(arr));
       });
 
       div.append(img, name, piece, mrp, button);

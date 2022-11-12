@@ -159,7 +159,7 @@ car.addEventListener("click" , function(){
 let all = document.getElementById("all")
 
 all.addEventListener("change" , function(el){
-  console.log(el.target.value)
+  //console.log(el.target.value)
   
   location.href = el.target.value +  ".html"
 })
