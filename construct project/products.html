@@ -162,6 +162,11 @@
   border: none;
   cursor: pointer;
 }
+
+#up{
+  display: flex;
+  justify-content: space-between;
+}
     </style>
   </head>
   <body>
@@ -332,6 +337,23 @@
         />
       </div> -->
 
+    <div id="up">
+      <div>
+        <select name="" id="filter" onchange="handlecat()">
+          <option value="Fruits and Vegetables">Fruits and Vegetables</option>
+          <option value="Cheese and Milk">Cheese and Milk</option>
+        </select>
+      </div>
+
+      <div>
+        <select name="" id="sort" onchange="handleSort()">
+          <option value="All">All</option>
+          <option value="LTH">Lower to Higher</option>
+          <option value="HTL">Higher to Lower</option>
+        </select>
+      </div>
+    </div>
+
     <div id="product-container"></div>
   </body>
 </html>
@@ -354,6 +376,34 @@
   }
 
   getdata();
+
+  function handlecat() {
+    let conti = document.querySelector("#filter").value;
+    let updatedata = bag.filter(function (ele) {
+      return ele.category == conti;
+    });
+    displaytable(updatedata);
+  }
+
+
+  function handleSort() {
+    let selected = document.querySelector("#sort").value;
+
+    if (selected == "All") {
+      getdata();
+    }
+
+    if (selected == "HTL") {
+      bag.sort((a, b) => b.price - a.price);
+    }
+
+    if (selected == "LTH") {
+      bag.sort((a, b) => a.price - b.price);
+    }
+    displaytable(bag);
+  }
+
+
 
   function displaytable(api) {
     document.getElementById("product-container").innerHTML = "";
