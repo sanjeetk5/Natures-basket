@@ -502,7 +502,7 @@
         <div>Category</div>
         <div>Price</div>
         <div>Discount</div>
-        <div>Qty</div>
+      
         <div>Remove</div>
       </div>
     </div>
@@ -942,8 +942,8 @@
       // let plus = document.createElement("button");
       // plus.innerText = "+";
 
-      let qty = document.createElement("button");
-      qty.innerText = "+" + "0" + "-";
+      // let qty = document.createElement("button");
+      // qty.innerText = "+" + "0" + "-";
 
       // let minus = document.createElement("button");
       // minus.innerText = "-";
@@ -961,7 +961,7 @@
         // added(ele)
       });
 
-      tr.append(img, product, price, discount, qty, del);
+      tr.append(img, product, price, discount,  del);
       document.querySelector("#cart-container").append(tr);
     });
   }
@@ -992,4 +992,10 @@
   sa.addEventListener("click" , function(){
     location.href = "address.html"
   })
+
+  let button = document.getElementById("reg")
+
+button.addEventListener("click" , function(){
+  location.href = "mobile.html"
+})
 </script>
